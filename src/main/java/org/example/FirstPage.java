@@ -17,6 +17,18 @@ public class FirstPage {
         drop = new Select(DriverSingleton.getInstance().findElement(By.name("culture")));
         drop.selectByVisibleText("ENGLISH");
 
+        //click "e-ticket application"
+        DriverSingleton.getInstance().findElement(By.id("request_ticket_btn")).click();
+
+        //click "New eTicket"
+        DriverSingleton.getInstance().findElement(By.cssSelector("button[class='swal2-confirm swal2-styled swal2-default-outline']")).click();
+
+
+
+
+
+
+
 
 
     }
