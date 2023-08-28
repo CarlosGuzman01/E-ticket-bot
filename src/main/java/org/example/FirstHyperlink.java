@@ -3,11 +3,10 @@
 package org.example;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
 
-public class FirstPage {
+public class FirstHyperlink {
 
-    public static void  goToNextHyperLink(){
+    public static void  goToNextHyperlink(){
 
         //going to the eticket website
         DriverSingleton.getInstance().get("https://eticket.migracion.gob.do");
