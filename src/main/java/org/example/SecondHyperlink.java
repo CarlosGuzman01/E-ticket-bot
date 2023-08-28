@@ -3,6 +3,7 @@
 package org.example;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.Select;
 
 public class SecondHyperlink {
 
@@ -39,6 +40,11 @@ public class SecondHyperlink {
                 DriverSingleton.getInstance().findElement(By.id("AcompanyNumber")).clear();
                 DriverSingleton.getInstance().findElement(By.id("AcompanyNumber")).sendKeys(finalNumberOfPeople);
 
+                //method that gets the nature of the group
+                getNatureOfTheGroup();
+
+
+
             }
 
         }else{
@@ -46,6 +52,18 @@ public class SecondHyperlink {
         }
 
     }
+
+    private static void getNatureOfTheGroup(){
+
+        Select drop = new Select(DriverSingleton.getInstance().findElement(By.name("Relation")));
+        drop.selectByIndex(3);
+
+
+
+
+    }
+
+
 
 
 }
