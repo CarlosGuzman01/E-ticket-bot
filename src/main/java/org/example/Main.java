@@ -8,6 +8,7 @@ public class Main {
 
         FirstHyperlink.goToNextHyperlink();
         SecondHyperlink.goToNextHyperlink();
+        ThirdHyperlink.goToNextHyperlink();
 
     }
 }

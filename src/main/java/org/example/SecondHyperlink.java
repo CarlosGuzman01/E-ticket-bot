@@ -30,7 +30,7 @@ public class SecondHyperlink {
 
     //method that checks if the user is traveling alone or not, I need to change this later so that it works with javaFX
     private static boolean areYouTravelingAlone(){
-        boolean alone = false;
+        boolean alone = false; //JAVA FX -- this value should not be hardcoded
 
         if(!alone){
             DriverSingleton.getInstance().findElement(By.xpath("//label[normalize-space()='NO']")).click();
@@ -43,7 +43,7 @@ public class SecondHyperlink {
     //method that check the number of people, I need to change this later so that it works with javaFX
     private static void getNumberOfPeopleTraveling(boolean alone){
         if(!alone){
-            int numberOfPeople = 2 - 1;
+            int numberOfPeople = 2 - 1; //JAVA FX -- this value should not be hardcoded
             String finalNumberOfPeople = String.valueOf(numberOfPeople);
 
             if(numberOfPeople > 0 && numberOfPeople < 7){
