@@ -7,12 +7,23 @@ import org.openqa.selenium.support.ui.Select;
 
 public class SecondHyperlink {
 
-    public static void goToNextHyperlink(){
+    public static void goToNextHyperlink() throws InterruptedException {
 
         boolean alone;
 
+        //method that checks if the user is traveling alone or not, I need to change this later so that it works with javaFX
         alone = areYouTravelingAlone();
+
+        //method that check the number of people, I need to change this later so that it works with javaFX
         getNumberOfPeopleTraveling(alone);
+
+        //method that helps me do the captcha
+        doCaptcha();
+
+        //click "submit"
+        DriverSingleton.getInstance().findElement(By.id("btnSumbit")).click();
+
+
 
 
     }
@@ -53,6 +64,7 @@ public class SecondHyperlink {
 
     }
 
+    //method that gets the nature of the group
     private static void getNatureOfTheGroup(){
 
         Select drop = new Select(DriverSingleton.getInstance().findElement(By.name("Relation")));
@@ -62,6 +74,15 @@ public class SecondHyperlink {
 
 
     }
+    //method that helps me do the captcha
+    private static void doCaptcha() throws InterruptedException {
+    int seconds = 25;
+
+    Thread.sleep(seconds * 1000);
+
+
+    }
+
 
 
 
